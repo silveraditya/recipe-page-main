@@ -16,6 +16,7 @@
 *::after {
     margin: 0;
     box-sizing: border-box;
+    padding: 0;
 }
 
 @font-face {
@@ -35,7 +36,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    padding-top: 128px;
+    padding-bottom: 128px;
 }
 
 .recipe {
@@ -48,6 +50,7 @@ body {
     padding-left: 2.5rem;
     padding-right: 2.5rem;
     border-radius: 24px;
+    /* min-height: 100vh; */
 }
 
 .recipe__image {
@@ -118,6 +121,11 @@ ul li::marker {
     font-weight: bold;
     font-size: 1rem;
     line-height: 1.5;
+
+}
+
+ol, ul {
+    padding-left: 2rem;
 }
 
 .recipe__nutrition__label {
@@ -157,11 +165,21 @@ td {
 
 
 @media (min-width: 320px) and (max-width: 599px) {
+    body {
+        padding-top: 0px;
+        padding-bottom: 0px;
+    }
+    
     .recipe {
         padding-left: 2rem;
         padding-right: 2rem;
         width: 375px;
+
     }
+
+    .recipe__image {
+        padding-top: 0px;
+        }
 
     img {
         width: 375px;
